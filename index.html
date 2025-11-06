@@ -223,19 +223,137 @@
 <div class="columns is-centered" style="margin-top: 2em;">
   <div class="column is-full-width has-text-centered">
     <h4 class="title is-4">6D Pose Estimator Diagram</h4>
-    <img src="./static/images/6D_Pose_Estimator.png" alt="6D Pose Estimator Diagram" style="width: 100%; border: 1px solid #eee;">
+    <img src="./static/images/6D_Pose_Estimator.png" alt="6D Pose Estimator Diagram" style="width: 100%;">
   </div>
 </div>
 
 <div class="columns is-centered" style="margin-top: 2em;">
   <div class="column is-full-width has-text-centered">
     <h4 class="title is-4">Scene Object Detector Diagram</h4>
-    <img src="./static/images/Scene_Object_Detector.png" alt="Scene Object Detector Diagram" style="width: 100%; border: 1px solid #eee;">
+    <img src="./static/images/Scene_Object_Detector.png" alt="Scene Object Detector Diagram" style="width: 100%;">
   </div>
 </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
 
+    <h2 class="title is-3 has-text-centered">Robotic Skills</h2>
+    <br>
+
+    <div class="columns is-multiline">
+
+      <div class="column is-half">
+        <h4 class="title is-4">Simple Move</h4>
+        <div class="content">
+          <ul>
+            <li>Basic skill for moving the robot to a predefined destination</li>
+            <li>Admittance control adjusts motion based on external forces</li>
+            <li>Minimum jerk trajectory planning for natural motion</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="column is-half">
+        <h4 class="title is-4">Screw / Unscrew</h4>
+        <div class="content">
+          <ul>
+            <li>Screw / Unscrew bolts with force-based control</li>
+            <li>PID force control maintains constant bolt pressure</li>
+            <li>Force feedback to detect success or failure</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="column is-half">
+        <h4 class="title is-4">Move to Object</h4>
+        <div class="content">
+          <ul>
+            <li>Utilizes 6D Pose Estimator</li>
+            <li>Estimates object's pose based on EEF motion</li>
+            <li>Filters object poses in the base frame</li>
+            <li>Moves EEF to align with the object's estimated location</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="column is-half">
+        <h4 class="title is-4">Move Object to</h4>
+        <div class="content">
+          <ul>
+            <li>Utilizes 6D Pose Estimator</li>
+            <li>Filters object poses in EEF frame</li>
+            <li>Moves the object to a defined pose in the base frame</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="column is-half">
+        <h4 class="title is-4">Grasp</h4>
+        <div class="content">
+          <ul>
+            <li>Closes the gripper with force-based control</li>
+            <li>Ensures secure grasp</li>
+            <li>Prevents object damage</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="column is-half">
+        <h4 class="title is-4">Insertion</h4>
+        <div class="content">
+          <ul>
+            <li>Insertion policy controls for smooth insertion</li>
+            <li>Spiral search reset in case of insertion failure</li>
+            <li>Behavior cloning-based refinement</li>
+          </ul>
+        </div>
+      </div>
+
+    </div> <hr> <div class="columns is-centered">
+      <div class="column is-full-width has-text-centered">
+        <h4 class="title is-4">Behavior Tree</h4>
+        <img src="./static/images/Behavior_Tree.png" alt="Behavior Tree Diagram" style="width: 100%;">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <h2 class="title is-3 has-text-centered">Future Work</h2>
+    <br>
+
+    <div class="columns is-multiline">
+
+      <div class="column is-half">
+        <h4 class="title is-4">Perception Utils</h4>
+        <div class="content">
+          <ul>
+            <li>Fuse Depth modality in the Perception Utils</li>
+            <li>Enhance multi-view perception</li>
+            <li>Optimize real-time inference to achieve higher FPS</li>
+            <li>Research and deployment of new state-of-the-art models</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="column is-half">
+        <h4 class="title is-4">Robotic Skills</h4>
+        <div class="content">
+          <ul>
+            <li>Adaptive Behavior Tree generation utilizing VLA</li>
+            <li>Online refinement of insertion policy</li>
+            <li>Learn manipulation policies in simulation</li>
+            <li>Deploy Sim2Real policies</li>
+          </ul>
+        </div>
+      </div>
+
+    </div> </div>
+</section>
 
 <footer class="footer">
   <div class="container">
