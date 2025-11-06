@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Our team at Bosch Corporate Research develops end-to-end solutions for robotic manipulation, leveraging state-of-the-art AI techniques to tackle industrial assembly challenges.">
-  <meta name="keywords" content="AI4IA, AI for Industrial Assembly, Bosch Corporate Research, Robotic Manipulation, Perception Utils">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI4IA: AI for Industrial Assembly</title>
+        content="Our team at Bosch Corporate Research develops end-to-end solutions for robotic manipulation, leveraging state-of-the-art AI techniques to tackle industrial assembly challenges.">
+  <meta name="keywords" content="AI4IA, AI for Industrial Assembly, Bosch Corporate Research, Robotic Manipulation, Perception Utils">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI4IA: AI for Industrial Assembly</title>
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
+
     function gtag() {
       dataLayer.push(arguments);
     }
+
     gtag('js', new Date());
+
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
@@ -28,7 +31,9 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- <link rel="icon" href="./static/images/favicon.svg">  -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
@@ -46,7 +51,7 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-    </div>
+      </div>
   </div>
 </nav>
 
@@ -55,25 +60,25 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">AI4IA: AI for Industrial Assembly</h1>
+          <h1 class="title is-1 publication-title">AI4IA: AI for Industrial Assembly</h1>
           <div class="is-size-5 publication-authors">
-            <span class="author-block">Anton Agafonov ,</span>
-            <span class="author-block">Nimrod Curtis ,</span>
-            <span class="author-block">Sher Hazan</span>
+            <span class="author-block">Anton Agafonov ,</span>
+            <span class="author-block">Nimrod Curtis ,</span>
+            <span class="author-block">Sher Hazan</span>
           </div>
           <div class="is-size-5 publication-authors">
-            <span class="author-block">Bosch Corporate Research</span>
+            <span class="author-block">Bosch Corporate Research</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a href="#videos"
-                  class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                    <i class="fab fa-youtube"></i>
+                <a href="https://youtu.be/v7DM-a49X9M"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
                   </span>
-                  <span>Videos</span>
+                  <span>Video</span>
                 </a>
               </span>
               </div>
@@ -88,12 +93,12 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-            <video id="teaser" autoplay muted loop playsinline height="100%">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
         <source src="./static/videos/imvc_teaser.mp4"
-              type="video/mp4">
+                type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        AI4IA enables precise, scalable, and robust robotic assembly, ensuring adaptability to real-world industrial environments.
+        AI4IA enables precise, scalable, and robust robotic assembly, ensuring adaptability to real-world industrial environments.
       </h2>
     </div>
   </div>
@@ -101,15 +106,15 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
-          <p>
-            Our team at Bosch Corporate Research develops end-to-end solutions for robotic manipulation,
-            leveraging state-of-the-art AI techniques to tackle industrial assembly challenges.
-            AI4IA enables precise, scalable, and robust robotic assembly, ensuring adaptability to real-world industrial environments.
-          </p>
+          <p>
+            Our team at Bosch Corporate Research develops end-to-end solutions for robotic manipulation,
+            leveraging state-of-the-art AI techniques to tackle industrial assembly challenges.
+            AI4IA enables precise, scalable, and robust robotic assembly, ensuring adaptability to real-world industrial environments.
+          </p>
         </div>
       </div>
     </div>
@@ -117,83 +122,83 @@
 </section>
 
 <section class="section" style="padding-top: 0;">
-  <div class="container is-max-desktop">
+  <div class="container is-max-desktop">
 
-        <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Perception Utils</h2>
+        <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Perception Utils</h2>
+        
+        <div class="content has-text-justified">
+          <ul>
+            <li><b>Object Tracker:</b> Real-time streaming (25 FPS), zero-shot, multi-object tracking based on SAM2.</li>
+            <li><b>6D Pose Estimator:</b> Real-time (10 FPS), zero-shot, based on SAM2 and MegaPose.</li>
+            <li><b>Behavior Cloning:</b> Deterministic policy, generalizes across scenarios, robust to lighting, and handles pose variations.</li>
+            <li><b>Object Detector:</b> Simple and fast onboarding of new objects, zero-shot, and built on SAM2 and DinoV2.</li>
+          </ul>
+        </div>
+                <img src="./static/images/pose_estimator_diagram.png" alt="6D Pose Estimator Diagram" style="width: 100%;"/>
+        <br><br>
+        <img src="./static/images/object_detector_diagram.png" alt="Scene Object Detector Diagram" style="width: 100%;"/>
+      </div>
+    </div>
+    
+        <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Robotic Skills</h2>
+        <div class="content has-text-justified">
+          <p>We developed a behavior tree of modular robotic skills:</p>
+          <ul>
+            <li><b>Simple Move:</b> Basic skill for moving the robot to a predefined destination.</li>
+            <li><b>Move to Object:</b> Utilizes 6D Pose Estimator to align EEF with the object.</li>
+            <li><b>Grasp:</b> Closes the gripper with force-based control to ensure secure grasp.</li>
+            <li><b>Screw / Unscrew:</b> Controls bolts with force-based control.</li>
+            <li><b>Move Object to:</b> Utilizes 6D Pose Estimator to move the object to a defined pose.</li>
+            <li><b>Insertion:</b> Insertion policy controls for smooth insertion, with spiral search reset on failure.</li>
+          </ul>
+        </div>
+                <img src="./static/images/behavior_tree.png" alt="Behavior Tree Diagram" style="width: 100%;"/>
+      </div>
+    </div>
 
-        <div class="content has-text-justified">
-          <ul>
-            <li><b>Object Tracker:</b> Real-time streaming (25 FPS), zero-shot, multi-object tracking based on SAM2.</li>
-            <li><b>6D Pose Estimator:</b> Real-time (10 FPS), zero-shot, based on SAM2 and MegaPose.</li>
-            <li><b>Behavior Cloning:</b> Deterministic policy, generalizes across scenarios, robust to lighting, and handles pose variations.</li>
-            <li><b>Object Detector:</b> Simple and fast onboarding of new objects, zero-shot, and built on SAM2 and DinoV2.</li>
-          </ul>
-        </div>
-                <img src="./static/images/pose_estimator_diagram.png" alt="6D Pose Estimator Diagram" style="width: 100%;"/>
-        <br><br>
-        <img src="./static/images/object_detector_diagram.png" alt="Scene Object Detector Diagram" style="width: 100%;"/>
-      </div>
-    </div>
-
-        <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Robotic Skills</h2>
-        <div class="content has-text-justified">
-          <p>We developed a behavior tree of modular robotic skills:</p>
-          <ul>
-            <li><b>Simple Move:</b> Basic skill for moving the robot to a predefined destination.</li>
-            <li><b>Move to Object:</b> Utilizes 6D Pose Estimator to align EEF with the object.</li>
-            <li><b>Grasp:</b> Closes the gripper with force-based control to ensure secure grasp.</li>
-            <li><b>Screw / Unscrew:</b> Controls bolts with force-based control.</li>
-            <li><b>Move Object to:</b> Utilizes 6D Pose Estimator to move the object to a defined pose.</li>
-            <li><b>Insertion:</b> Insertion policy controls for smooth insertion, with spiral search reset on failure.</li>
-          </ul>
-        </div>
-                <img src="./static/images/behavior_tree.png" alt="Behavior Tree Diagram" style="width: 100%;"/>
-      </div>
-    </div>
-
-        <div class="columns is-centered" id="videos">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Demo Videos</h2>
-        <p>Here you can see the demo videos from the presentation.</p>
-
-                <div class="columns is-multiline">
-
-          <div class="column is-one-quarter">
-            <video autoplay loop muted playsinline controls style="width: 100%;">
-              <source src="./static/videos/your_video_1.mp4" type="video/mp4">
-            </video>
-            <p class="has-text-centered" style="margin-top: 0.25em;">Video 1 Title</p>
-          </div>
-
-          <div class="column is-one-quarter">
-            <video autoplay loop muted playsinline controls style="width: 100%;">
-              <source src="./static/videos/your_video_2.mp4" type="video/mp4">
-            </video>
-            <p class="has-text-centered" style="margin-top: 0.25em;">Video 2 Title</p>
-          </div>
-
-          <div class="column is-one-quarter">
-            <video autoplay loop muted playsinline controls style="width: 100%;">
-              <source src="./static/videos/your_video_3.mp4" type="video/mp4">
-            </video>
-            <p class="has-text-centered" style="margin-top: 0.25em;">Video 3 Title</p>
-          </div>
-
-          <div class="column is-one-quarter">
-            <video autoplay loop muted playsinline controls style="width: 100%;">
-              <source src="./static/videos/your_video_4.mp4" type="video/mp4">
-            </video>
-            <p class="has-text-centered" style="margin-top: 0.25em;">Video 4 Title</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
+        <div class="columns is-centered" id="videos">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Demo Videos</h2>
+        <p>Here you can see the demo videos from the presentation.</p>
+        
+                <div class="columns is-multiline">
+          
+          <div class="column is-one-quarter">
+            <video autoplay loop muted playsinline controls style="width: 100%;">
+              <source src="./static/videos/your_video_1.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered" style="margin-top: 0.25em;">Video 1 Title</p>
+          </div>
+          
+          <div class="column is-one-quarter">
+            <video autoplay loop muted playsinline controls style="width: 100%;">
+              <source src="./static/videos/your_video_2.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered" style="margin-top: 0.25em;">Video 2 Title</p>
+          </div>
+          
+          <div class="column is-one-quarter">
+            <video autoplay loop muted playsinline controls style="width: 100%;">
+              <source src="./static/videos/your_video_3.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered" style="margin-top: 0.25em;">Video 3 Title</p>
+          </div>
+          
+          <div class="column is-one-quarter">
+            <video autoplay loop muted playsinline controls style="width: 100%;">
+              <source src="./static/videos/your_video_4.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered" style="margin-top: 0.25em;">Video 4 Title</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
 </section>
 
 <footer class="footer">
