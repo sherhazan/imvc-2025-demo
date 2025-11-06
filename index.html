@@ -94,7 +94,7 @@
   </div>
 </section>
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
@@ -106,7 +106,69 @@
       </h2>
     </div>
   </div>
+</section> -->
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+
+      <div id="video-carousel" class="carousel">
+        
+        <div class="item">
+          <video muted playsinline controls style="width: 100%;">
+            <source src="./static/videos/IMVC_Demo.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item">
+          <video muted playsinline controls style="width: 100%;">
+            <source src="./static/videos/IMVC_Onboarding.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item">
+          <video muted playsinline controls style="width: 100%;">
+            <source src="./static/videos/IMVC_Fail.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item">
+          <video muted playsinline controls style="width: 100%;">
+            <source src="./static/videos/IMVC_Multi_obj_cam.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        </div> <div id="text-carousel" class="carousel" style="margin-top: 1em;">
+        
+        <div class="item">
+          <h2 class="subtitle has-text-centered">
+            AI4IA enables precise, scalable, and robust robotic assembly, ensuring adaptability to real-world industrial environments.
+          </h2>
+        </div>
+
+        <div class="item">
+          <h2 class="subtitle has-text-centered">
+            AI4IA enables precise, scalable, and robust robotic assembly, ensuring adaptability to real-world industrial environments.
+          </h2>
+        </div>
+
+        <div class="item">
+          <h2 class="subtitle has-text-centered">
+            AI4IA enables precise, scalable, and robust robotic assembly, ensuring adaptability to real-world industrial environments.
+          </h2>
+        </div>
+
+        <div class="item">
+          <h2 class="subtitle has-text-centered">
+            AI4IA enables precise, scalable, and robust robotic assembly, ensuring adaptability to real-world industrial environments.
+          </h2>
+        </div>
+        
+        </div> </div>
+  </div>
 </section>
+
+
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -358,6 +420,42 @@
     </div>
   </div>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  
+  var videoCarousel = bulmaCarousel.attach('#video-carousel', {
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    loop: true,
+  })[0]; 
+  
+  var textCarousel = bulmaCarousel.attach('#text-carousel', {
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    loop: true,
+    pagination: false, 
+    arrows: false,     
+  })[0];
+  
+  var isSyncing = false;
+  
+  videoCarousel.on('slide:after', function(event) {
+    if (isSyncing) return; 
+    isSyncing = true;
+    textCarousel.moveTo(event.index); 
+    isSyncing = false;
+  });
+  
+  textCarousel.on('slide:after', function(event) {
+    if (isSyncing) return;
+    isSyncing = true;
+    videoCarousel.moveTo(event.index); 
+    isSyncing = false;
+  });
+
+});
+</script>
 
 </body>
 </html>
