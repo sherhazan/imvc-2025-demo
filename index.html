@@ -3,21 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="IndustRoPose: a real-time, zero-shot 6D pose tracker for industrial robotic manipulation, integrating SAM2 and MegaPose.">
-  <meta name="keywords" content="IndustRoPose, 6D Pose Estimation, Robotic Manipulation, Zero-Shot, Real-Time Tracking, SAM2, MegaPose">
+        content="Our team at Bosch Corporate Research develops end-to-end solutions for robotic manipulation, leveraging state-of-the-art AI techniques to tackle industrial assembly challenges.">
+  <meta name="keywords" content="AI4IA, AI for Industrial Assembly, Bosch Corporate Research, Robotic Manipulation, Perception Utils">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>IndustRoPose: Zero Shot Real-Time 6D Pose Tracking for Industrial Robotic Manipulation</title>
+  <title>AI4IA: AI for Industrial Assembly</title>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-
     function gtag() {
       dataLayer.push(arguments);
     }
-
     gtag('js', new Date());
-
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
@@ -31,9 +28,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <!-- <link rel="icon" href="./static/images/favicon.svg">  -->
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
@@ -51,7 +46,7 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      </div>
+    </div>
   </div>
 </nav>
 
@@ -60,45 +55,25 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">IndustRoPose: Zero Shot Real-Time 6D Pose Tracking for Industrial Robotic Manipulation</h1>
+          <h1 class="title is-1 publication-title">AI4IA: AI for Industrial Assembly</h1>
           <div class="is-size-5 publication-authors">
-            <span class="author-block">Sher Hazan ,</span>
-            <span class="author-block">Nimrod Curtis ,</span>
             <span class="author-block">Anton Agafonov ,</span>
-            <span class="author-block">Zohar Feldman ,</span>
-            <span class="author-block">Dotan Di Castro </span>
+            <span class="author-block">Nimrod Curtis ,</span>
+            <span class="author-block">Sher Hazan</span>
           </div>
           <div class="is-size-5 publication-authors">
-            <span class="author-block"> Bosch Corporate Research, Haifa, Israel</span>
+            <span class="author-block">Bosch Corporate Research</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a href="https://sherhazan.github.io/IndustRoPose/"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
+                <a href="#videos"
+                  class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-youtube"></i>
                   </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/YOUR_ARXIV_ID"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://youtu.be/PGYcM2EmeWQ"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
+                  <span>Videos</span>
                 </a>
               </span>
               </div>
@@ -113,12 +88,12 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
+            <video id="teaser" autoplay muted loop playsinline height="100%">
         <source src="./static/videos/imvc_teaser.mp4"
-                type="video/mp4">
+              type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        IndustRoPose enables robust, real-time 6D pose tracking for industrial assembly tasks like insertion and screwing.
+        AI4IA enables precise, scalable, and robust robotic assembly, ensuring adaptability to real-world industrial environments.
       </h2>
     </div>
   </div>
@@ -126,389 +101,101 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
+        <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
           <p>
-            Robotic assembly remains a core challenge in industrial automation, requiring high precision, real-time feedback, and adaptability across diverse parts and dynamic environments. While recent advances in 6D object pose estimation and foundation models offer promising capabilities, most approaches are evaluated in static environments and lack robust integration into industrial workflows. In this work, we introduce IndustRoPose, a real-time, zero-shot 6D pose tracker for industrial robotic manipulation. IndustRoPose integrates SAM2 for high-frequency segmentation with MegaPose for render-and-compare 6D pose estimation. Its mask-consistency scoring adaptively switches between tracking, refinement, and recovery modes, ensuring robustness under occlusion, motion blur, and visual ambiguity. IndustRoPose enables fast and easy onboarding of new objects using only a CAD model and a single annotated image, without task-specific retraining or simulation. We integrate IndustRoPose into the robot via a pose-based control policy that fuses perception with motion commands, maintaining stable tracking even during high-speed movements. To address flexible and scalable automation, we present IndustRobot, a modular framework for industrial robotic assembly. IndustRobot seamlessly integrates IndustRoPose with a skill-based manipulation layer, supporting adaptive behaviors and rapid task reconfiguration. This enables precise execution of contact-rich skills such as insertion, screwing, and part manipulation, while allowing skills to be reused or extended for new tasks with minimal programming. Finally, we demonstrate sub-millimeter pose accuracy and high task success rates, 96.7% for plug insertion and 97.5% for screwing, on real industrial assembly tasks, validating the practicality and robustness of the approach in dynamic environments.
+            Our team at Bosch Corporate Research develops end-to-end solutions for robotic manipulation,
+            leveraging state-of-the-art AI techniques to tackle industrial assembly challenges.
+            AI4IA enables precise, scalable, and robust robotic assembly, ensuring adaptability to real-world industrial environments.
           </p>
         </div>
       </div>
     </div>
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_ID_HERE?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div> -->
-    </div>
+  </div>
 </section>
 
 <section class="section" style="padding-top: 0;">
   <div class="container is-max-desktop">
 
-    <div class="columns is-centered">
+        <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Method</h2>
-        <h3 class="title is-4">IndustRoPose: Real-Time 6D Pose Tracker</h3>
+        <h2 class="title is-3">Perception Utils</h2>
+
         <div class="content has-text-justified">
-        <p>
-          At the core of our system is IndustRoPose, a real-time 6D pose tracking pipeline designed for robust performance on streaming RGB input. It integrates the rapid zero-shot segmentation capability of SAM2 with the precise render-and-compare estimation of MegaPose.
-        </p>
-        <p>
-          <strong>How it works:</strong>
-        </p>
-        <ul>
-          <li>
-            <strong>Initialization:</strong> Before the stream begins, we initialize the system. SAM2 is given a pre-captured image and prompt points to automatically identify the target object. Simultaneously, MegaPose is loaded with the object's CAD model and camera intrinsic parameters.
-          </li>
-          <li>
-            <strong>Tracking & Scoring:</strong> Once initialized, the system enters its tracking loop. At each timestep, it compares the current segmentation mask from SAM2 (the "ground truth") to a rendered mask from the previous pose estimate. We compute a "mask-consistency score" based on precision and recall to infer the tracking quality without running the expensive full pose estimation model every frame.
-          </li>
-          <li>
-            <strong>Adaptive Modes:</strong> This score dynamically triggers one of three modes:
-            <ol>
-              <li><strong>Track:</strong> If the score is high, we assume the previous pose is accurate and carry it forward.</li>
-              <li><strong>Refine:</strong> If the score is moderate (indicating minor drift), we trigger only the MegaPose refiner for a lightweight correction.</li>
-              <li><strong>Recover:</strong> If the score is low (due to occlusion or fast motion), we re-run the full coarse-to-fine estimation process to re-acquire the pose.</li>
-            </ol>
-          </li>
-        </ul>
-        <p>
-          This adaptive strategy balances accuracy and computational efficiency, ensuring real-time performance (over 10 FPS) even under challenging conditions like occlusion, motion blur, or partial object visibility.
-        </p>
-        </div>
-        <img src="./static/images/Real-Time6DPoseTracker.png" alt="IndustRoPose pipeline architecture" style="width: 100%;"/>
-      </div>
-    </div>
-      <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h3 class="title is-4">IndustRobot: Pose-Based Robotic Manipulation</h3>
-        
-        <div class="content has-text-justified">
-          <p>
-            To address flexible and scalable automation, we present IndustRobot, a modular framework that integrates IndustRoPose's perception with a skill-based manipulation layer. To execute complex assembly tasks, we decompose the process into a sequence of modular and reusable skills that can be refined independently and recombined to solve new tasks. These skills, illustrated in the figure below, include:
-          </p>
           <ul>
-            <li><strong>Move to Object:</strong> A pose-based skill using the IndustRoPose tracker to guide the gripper to the target object.</li>
-            <li><strong>Move Gripper:</strong> A low-level skill for force-controlled grasping.</li>
-            <li><strong>Move Object to:</strong> A pose-based skill to transport the grasped object to a target, also stabilized by the tracker.</li>
-            <li><strong>Insertion / Screwing:</strong> Advanced skills for the final, high-precision, contact-rich maneuvers.</li>
+            <li><b>Object Tracker:</b> Real-time streaming (25 FPS), zero-shot, multi-object tracking based on SAM2.</li>
+            <li><b>6D Pose Estimator:</b> Real-time (10 FPS), zero-shot, based on SAM2 and MegaPose.</li>
+            <li><b>Behavior Cloning:</b> Deterministic policy, generalizes across scenarios, robust to lighting, and handles pose variations.</li>
+            <li><b>Object Detector:</b> Simple and fast onboarding of new objects, zero-shot, and built on SAM2 and DinoV2.</li>
           </ul>
         </div>
-        <img src="./static/images/PoseBasedRoboticManipulation.png" alt="Modular manipulation skills pipeline" style="width: 100%;"/>
-        
-        <br><br> <div class="content has-text-justified">
-          <p>
-            For precise, contact-rich skills like insertion, we use an advanced policy implemented using a transformer-based architecture. As shown in the next figure, it processes images from two cameras through ResNet18 encoders to extract feature maps. These are fed into a Transformer Encoder to find robust cross-view correspondences. Finally, an MLP decoder regresses the precise 6-DOF pose correction required for alignment.
-          </p>
-        </div>
-        <img src="./static/images/transformer.png" alt="Transformer insertion policy architecture" style="width: 100%;"/>
-        
+                <img src="./static/images/pose_estimator_diagram.png" alt="6D Pose Estimator Diagram" style="width: 100%;"/>
+        <br><br>
+        <img src="./static/images/object_detector_diagram.png" alt="Scene Object Detector Diagram" style="width: 100%;"/>
       </div>
     </div>
 
-      <div class="columns is-centered">
+        <div class="columns is-centered">
       <div class="column is-full-width">
-
-        <h2 class="title is-3">Experiments</h2>
-        
+        <h2 class="title is-3">Robotic Skills</h2>
         <div class="content has-text-justified">
-          <p>
-            We evaluated our framework on two real-world tasks: plug insertion and screw driving, using a diverse set of standard industrial and consumer components.
-          </p>
+          <p>We developed a behavior tree of modular robotic skills:</p>
+          <ul>
+            <li><b>Simple Move:</b> Basic skill for moving the robot to a predefined destination.</li>
+            <li><b>Move to Object:</b> Utilizes 6D Pose Estimator to align EEF with the object.</li>
+            <li><b>Grasp:</b> Closes the gripper with force-based control to ensure secure grasp.</li>
+            <li><b>Screw / Unscrew:</b> Controls bolts with force-based control.</li>
+            <li><b>Move Object to:</b> Utilizes 6D Pose Estimator to move the object to a defined pose.</li>
+            <li><b>Insertion:</b> Insertion policy controls for smooth insertion, with spiral search reset on failure.</li>
+          </ul>
         </div>
-        
-        <h3 class="title is-4">Test Cases & Experimental Setup</h3>
-        
-        <div class="content has-text-justified">
-          <p>
-            To evaluate generality, we selected a diverse set of standard components. For plug assembly, this included USB (Types A, B, C), Ethernet (RJ45), Telephone (RJ11), and HDMI. The screwing task utilized M8 screws with Phillips (PH2, PH3) and Hex (HEX5, HEX6) drive types.
-          </p>
-        </div>
-        <img src="./static/images/text_cases.png" alt="Connectors and screws used in experiments" style="width: 100%;"/>
+                <img src="./static/images/behavior_tree.png" alt="Behavior Tree Diagram" style="width: 100%;"/>
+      </div>
+    </div>
 
-        <br><br> <div class="content has-text-justified">
-          <p>
-            All experiments were conducted on a UR5e robotic arm in a controlled cell. The perception system consists of two Intel RealSense D405 cameras mounted on the robot's wrist. As shown in the figure, the end-effector was task-specific: a Robotiq 2F-85 adaptive gripper for plug insertion and a Bosch GO-2 electric screwdriver for screwing.
-          </p>
-        </div>
-        <img src="./static/images/setup.png" alt="Experimental setup with UR5e robot" style="width: 50%; display: block; margin: auto;"/>
-        <br>
-        
-        <h3 class="title is-4">Success Rates</h3>
-        
-        <div class="content has-text-justified">
-          <p>
-            We achieved high success rates across all stages. For the plug assembly task, the full end-to-end pipeline success rate was <b>96.67%</b> (58/60). For the screwing task, the full pipeline success rate was <b>97.50%</b> (39/40), validating the robustness and modularity of our approach.
-          </p>
-        </div>
+        <div class="columns is-centered" id="videos">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Demo Videos</h2>
+        <p>Here you can see the demo videos from the presentation.</p>
 
-        <div class="columns is-desktop">
+                <div class="columns is-multiline">
 
-          <div class="column">
-
-            <p class="has-text-weight-bold has-text-centered" style="margin-bottom: 0.5em;">Plug Assembly Task</p>
-
-            <table class="table is-striped is-fullwidth is-narrow" style="font-size: 0.85em;">
-              <thead>
-                <tr class="has-text-centered">
-                  <th class="has-text-left" style="border-top: 2px solid #000000; border-bottom: 2px solid #000000;">Connector</th>
-                  <th style="border-top: 2px solid #000000; border-bottom: 2px solid #000000;">Grasp</th>
-                  <th style="border-top: 2px solid #000000; border-bottom: 2px solid #000000;">Align</th>
-                  <th style="border-top: 2px solid #000000; border-bottom: 2px solid #000000;">Insert</th>
-                  <th style="border-top: 2px solid #000000; border-bottom: 2px solid #000000;">Full pipeline</th>
-                </tr>
-              </thead>
-              <tbody class="has-text-centered">
-                <tr>
-                  <td class="has-text-left">USB Type A</td>
-                  <td>100/100</td>
-                  <td>100/100</td>
-                  <td>97/100</td>
-                  <td>10/10</td>
-                </tr>
-                <tr>
-                  <td class="has-text-left">USB Type B</td>
-                  <td>99/100</td>
-                  <td>100/100</td>
-                  <td>99/100</td>
-                  <td>10/10</td>
-                </tr>
-                <tr>
-                  <td class="has-text-left">USB Type C</td>
-                  <td>99/100</td>
-                  <td>100/100</td>
-                  <td>99/100</td>
-                  <td>10/10</td>
-                </tr>
-                <tr>
-                  <td class="has-text-left">Ethernet RJ45</td>
-                  <td>100/100</td>
-                  <td>100/100</td>
-                  <td>100/100</td>
-                  <td>10/10</td>
-                </tr>
-                <tr>
-                  <td class="has-text-left">Telephone RJ11</td>
-                  <td>86/100</td>
-                  <td>97/100</td>
-                  <td>100/100</td>
-                  <td>9/10</td>
-                </tr>
-                <tr>
-                  <td class="has-text-left">HDMI</td>
-                  <td>100/100</td>
-                  <td>100/100</td>
-                  <td>92/100</td>
-                  <td>9/10</td>
-                </tr>
-                <tr style="border-top: 2px solid #000000;">
-                  <td class="has-text-left">Total</td>
-                  <td>584/600</td>
-                  <td>597/600</td>
-                  <td>587/600</td>
-                  <td>58/60</td>
-                </tr>
-                <tr style="border-bottom: 2px solid #000000;">
-                  <td class="has-text-left"><strong>Success Rate</strong></td>
-                  <td><strong>97.33%</strong></td>
-                  <td><strong>99.50%</strong></td>
-                  <td><strong>97.83%</strong></td>
-                  <td><strong>96.67%</strong></td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="column is-one-quarter">
+            <video autoplay loop muted playsinline controls style="width: 100%;">
+              <source src="./static/videos/your_video_1.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered" style="margin-top: 0.25em;">Video 1 Title</p>
           </div>
 
-          <div class="column">
+          <div class="column is-one-quarter">
+            <video autoplay loop muted playsinline controls style="width: 100%;">
+              <source src="./static/videos/your_video_2.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered" style="margin-top: 0.25em;">Video 2 Title</p>
+          </div>
 
-            <p class="has-text-weight-bold has-text-centered" style="margin-bottom: 0.5em;">Screw/Unscrew Task</p>
+          <div class="column is-one-quarter">
+            <video autoplay loop muted playsinline controls style="width: 100%;">
+              <source src="./static/videos/your_video_3.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered" style="margin-top: 0.25em;">Video 3 Title</p>
+          </div>
 
-            <table class="table is-striped is-fullwidth is-narrow" style="font-size: 0.85em;">
-              <thead>
-                <tr class="has-text-centered">
-                  <th class="has-text-left" style="border-top: 2px solid #000000; border-bottom: 2px solid #000000;">Screw type</th>
-                  <th style="border-top: 2px solid #000000; border-bottom: 2px solid #000000;">Align</th>
-                  <th style="border-top: 2px solid #000000; border-bottom: 2px solid #000000;">Insert</th>
-                  <th style="border-top: 2px solid #000000; border-bottom: 2px solid #000000;">Screw</th>
-                  <th style="border-top: 2px solid #000000; border-bottom: 2px solid #000000;">Unscrew</th>
-                  <th style="border-top: 2px solid #000000; border-bottom: 2px solid #000000;">Full pipeline</th>
-                </tr>
-              </thead>
-              <tbody class="has-text-centered">
-                <tr>
-                  <td class="has-text-left">Philips PH2</td>
-                  <td>99/100</td>
-                  <td>100/100</td>
-                  <td>50/50</td>
-                  <td>50/50</td>
-                  <td>10/10</td>
-                </tr>
-                <tr>
-                  <td class="has-text-left">Philips PH3</td>
-                  <td>100/100</td>
-                  <td>100/100</td>
-                  <td>50/50</td>
-                  <td>49/50</td>
-                  <td>10/10</td>
-                </tr>
-                <tr>
-                  <td class="has-text-left">Allen HEX5</td>
-                  <td>98/100</td>
-                  <td>94/100</td>
-                  <td>49/50</td>
-                  <td>46/50</td>
-                  <td>9/10</td>
-                </tr>
-                <tr>
-                  <td class="has-text-left">Allen HEX6</td>
-                  <td>95/100</td>
-                  <td>98/100</td>
-                  <td>48/50</td>
-                  <td>50/50</td>
-                  <td>10/10</td>
-                </tr>
-                <tr style="border-top: 2px solid #000000;">
-                  <td class="has-text-left">Total</td>
-                  <td>392/400</td>
-                  <td>392/400</td>
-                  <td>197/200</td>
-                  <td>195/200</td>
-                  <td>39/40</td>
-                </tr>
-                <tr style="border-bottom: 2px solid #000000;">
-                  <td class="has-text-left"><strong>Success Rate</strong></td>
-                  <td><strong>98.00%</strong></td>
-                  <td><strong>98.00%</strong></td>
-                  <td><strong>98.50%</strong></td>
-                  <td><strong>97.50%</strong></td>
-                  <td><strong>97.50%</strong></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <p class="content has-text-weight-bold">Grasping (Move to Object)</p>
-        <div class="columns is-multiline">
-          
           <div class="column is-one-quarter">
             <video autoplay loop muted playsinline controls style="width: 100%;">
-              <source src="./static/videos/grasping_type_a.mp4" type="video/mp4">
+              <source src="./static/videos/your_video_4.mp4" type="video/mp4">
             </video>
-            <p class="has-text-centered" style="margin-top: 0.25em;">USB Type A</p>
-          </div>
-          
-          <div class="column is-one-quarter">
-            <video autoplay loop muted playsinline controls style="width: 100%;">
-              <source src="./static/videos/grasping_type_b.mp4" type="video/mp4">
-            </video>
-            <p class="has-text-centered" style="margin-top: 0.25em;">USB Type B</p>
-          </div>
-          
-          <div class="column is-one-quarter">
-            <video autoplay loop muted playsinline controls style="width: 100%;">
-              <source src="./static/videos/grasping_type_c.mp4" type="video/mp4">
-            </video>
-            <p class="has-text-centered" style="margin-top: 0.25em;">USB Type C</p>
-          </div>
-          
-          <div class="column is-one-quarter">
-            <video autoplay loop muted playsinline controls style="width: 100%;">
-              <source src="./static/videos/grasping_cat_5.mp4" type="video/mp4">
-            </video>
-            <p class="has-text-centered" style="margin-top: 0.25em;">Ethernet RJ45</p>
-          </div>
-        </div>
-
-        <p class="content has-text-weight-bold" style="margin-top: 1.5rem;">Insertion (Contact-Rich)</p>
-        <div class="columns is-multiline">
-          
-          <div class="column is-one-quarter">
-            <video autoplay loop muted playsinline controls style="width: 100%;">
-              <source src="./static/videos/insertion_type_a.mp4" type="video/mp4">
-            </video>
-            <p class="has-text-centered" style="margin-top: 0.25em;">USB Type A</p>
-          </div>
-          
-          <div class="column is-one-quarter">
-            <video autoplay loop muted playsinline controls style="width: 100%;">
-              <source src="./static/videos/insertion_type_b.mp4" type="video/mp4">
-            </video>
-            <p class="has-text-centered" style="margin-top: 0.25em;">USB Type B</p>
-          </div>
-          
-          <div class="column is-one-quarter">
-            <video autoplay loop muted playsinline controls style="width: 100%;">
-              <source src="./static/videos/insertion_type_c.mp4" type="video/mp4">
-            </video>
-            <p class="has-text-centered" style="margin-top: 0.25em;">USB Type C</p>
-          </div>
-          
-          <div class="column is-one-quarter">
-            <video autoplay loop muted playsinline controls style="width: 100%;">
-              <source src="./static/videos/insertion_cat_5.mp4" type="video/mp4">
-            </video>
-            <p class="has-text-centered" style="margin-top: 0.25em;">Ethernet RJ45</p>
-          </div>
-        </div>
-        
-        <p class="content has-text-weight-bold" style="margin-top: 1.5rem;">Screwing / Unscrewing</p>
-        <div class="columns is-multiline">
-          
-          <div class="column is-one-quarter">
-            <video autoplay loop muted playsinline controls style="width: 100%;">
-              <source src="./static/videos/screwing_PH_2.mp4" type="video/mp4">
-            </video>
-            <p class="has-text-centered" style="margin-top: 0.25em;">Philips PH2</p>
-          </div>
-          
-          <div class="column is-one-quarter">
-            <video autoplay loop muted playsinline controls style="width: 100%;">
-              <source src="./static/videos/screwing_PH_3.mp4" type="video/mp4">
-            </video>
-            <p class="has-text-centered" style="margin-top: 0.25em;">Philips PH3</p>
-          </div>
-          
-          <div class="column is-one-quarter">
-            <video autoplay loop muted playsinline controls style="width: 100%;">
-              <source src="./static/videos/screwing_HEX_5.mp4" type="video/mp4">
-            </video>
-            <p class="has-text-centered" style="margin-top: 0.25em;">Allen HEX5</p>
-          </div>
-          
-          <div class="column is-one-quarter">
-            <video autoplay loop muted playsinline controls style="width: 100%;">
-              <source src="./static/videos/screwing_HEX_6.mp4" type="video/mp4">
-            </video>
-            <p class="has-text-centered" style="margin-top: 0.25em;">Allen HEX6</p>
+            <p class="has-text-centered" style="margin-top: 0.25em;">Video 4 Title</p>
           </div>
         </div>
 
       </div>
     </div>
-
-      </div>
-    </div>
-    </div>
-
-</section>
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@inproceedings{hazan2025industropose,
-  title={IndustRoPose: Zero Shot Real-Time 6D Pose Tracking for Industrial Robotic Manipulation},
-  author={Hazan, Sher and Curtis, Nimrod and Agafonov, Anton and Feldman, Zohar and Di Castro, Dotan},
-  booktitle={Proceedings of the ... (e.g., IEEE International Conference on Robotics and Automation (ICRA))},
-  year={2025}
-}</code></pre>
   </div>
 </section>
+
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
