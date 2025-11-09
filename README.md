@@ -1,12 +1,10 @@
-# IndustRoPose: Project Website
+# AI4IA: IMVC 2025 Demo Website
 
-This repository contains the source code for the official project website for our paper:
-
-**"IndustRoPose: Zero Shot Real-Time 6D Pose Tracking for Industrial Robotic Manipulation"**
+This repository contains the source code for the project page demonstrating our work on **"AI4IA: AI for Industrial Assembly"**, presented at IMVC 2025.
 
 ---
 
-### ➡️ [View the Live Website Here](https://sherhazan.github.io/IndustRoPose/)
+### ➡️ [View the Live Website Here](https://sherhazan.github.io/imvc-2025-demo/)
 
 ---
 
